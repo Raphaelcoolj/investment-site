@@ -85,7 +85,8 @@ export async function POST(request: Request) {
             amount: amount,
             coin: method.toUpperCase(),
             type: 'deposit',
-            status: 'pending'
+            status: 'pending',
+            description: `Deposit via ${method.toUpperCase()}`
         });
 
         return NextResponse.json({ message: 'Deposit notification sent' });

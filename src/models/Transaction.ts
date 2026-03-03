@@ -4,8 +4,9 @@ export interface ITransaction extends Document {
     userId: mongoose.Types.ObjectId;
     amount: number;
     coin: string;
-    type: 'deposit' | 'withdrawal' | 'increment';
+    type: 'deposit' | 'withdrawal' | 'increment' | 'investment' | 'payout';
     status: 'pending' | 'success' | 'failed';
+    description?: string;
     createdAt: Date;
     updatedAt: Date;
 }
@@ -26,13 +27,17 @@ const TransactionSchema = new Schema<ITransaction>({
     },
     type: {
         type: String,
-        enum: ['deposit', 'withdrawal', 'increment'],
+        enum: ['deposit', 'withdrawal', 'increment', 'investment', 'payout'],
         required: true,
     },
     status: {
         type: String,
         enum: ['pending', 'success', 'failed'],
         default: 'pending',
+    },
+    description: {
+        type: String,
+        required: false,
     },
 }, { timestamps: true });
 

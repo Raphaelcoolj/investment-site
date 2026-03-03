@@ -47,7 +47,8 @@ export async function PATCH(request: Request, { params }: { params: { id: string
                     amount: diff,
                     coin: 'USD', // Or 'ADMIN'
                     type: 'deposit',
-                    status: 'success'
+                    status: 'success',
+                    description: 'Manual deposit by administrator'
                 });
             }
         } else if (newBalance < oldBalance) {
@@ -58,7 +59,8 @@ export async function PATCH(request: Request, { params }: { params: { id: string
                 amount: diff,
                 coin: 'USD',
                 type: 'withdrawal',
-                status: 'success'
+                status: 'success',
+                description: 'Manual debit by administrator'
             });
         }
 

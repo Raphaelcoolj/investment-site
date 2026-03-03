@@ -45,7 +45,8 @@ export async function GET() {
                         coin: 'USD',
                         type: 'increment',
                         status: 'success',
-                        createdAt: incrementDate
+                        createdAt: incrementDate,
+                        description: 'Daily automated ROI increment'
                     }));
                 }
                 

@@ -9,6 +9,8 @@ The Owner accepts full responsibility for all content and actions associated wit
 3. DEVELOPER ROLE AND DISCLAIMER
 The individuals or entities responsible for the technical development of this website ("Developers") have been hired as independent contractors to build specific features as requested by the Owner. The Developers' role is strictly limited to technical execution and implementation. The Developers do not own, control, or profit from the business operations of the site, nor do they have any decision-making authority regarding the site's content, financial policies, or legal compliance. Any legal or regulatory inquiries should be directed solely to the Owner.
 
+CRITICAL NOTICE: The Developers/Creators of this software explicitly state that they have no affiliation, responsibility, or involvement with the operation of this website once delivered. If this platform is used by the Owner or any third party for fraudulent activities, scams, or illegal financial operations, the Creators shall NOT be held liable. The Creators unequivocally condemn any such use and distance themselves from any misuse of the provided code.
+
 4. FINANCIAL RULES AND REGULATIONS
 
 4.1 ANTI-MONEY LAUNDERING (AML) 

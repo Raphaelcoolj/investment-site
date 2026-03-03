@@ -19,6 +19,7 @@ export default function AdminLayout({
                     </Link>
                     <nav className="hidden gap-4 md:flex">
                         <Link href="/admin/users" className="hover:text-red-400">Users</Link>
+                        <Link href="/admin/investments" className="hover:text-red-400">Investments</Link>
                         <Link href="/admin/settings" className="hover:text-red-400">Settings</Link>
                     </nav>
                 </div>
@@ -41,6 +42,13 @@ export default function AdminLayout({
                             className="rounded-lg px-4 py-2 hover:bg-slate-800"
                         >
                             Users
+                        </Link>
+                        <Link 
+                            href="/admin/investments" 
+                            onClick={() => setIsMenuOpen(false)}
+                            className="rounded-lg px-4 py-2 hover:bg-slate-800"
+                        >
+                            Investments
                         </Link>
                         <Link 
                             href="/admin/settings" 
