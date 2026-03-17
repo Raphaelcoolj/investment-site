@@ -27,7 +27,7 @@ export default function AdminSettingsPage() {
                 sol: formData.get('sol'),
                 cashapp: formData.get('cashapp'),
                 paypal: formData.get('paypal'),
-                zelle: formData.get('zelle'),
+                applePay: formData.get('applePay'),
             }
         };
 
@@ -132,11 +132,11 @@ export default function AdminSettingsPage() {
                             />
                         </div>
                         <div>
-                            <label className="mb-2 block text-sm text-slate-400">Zelle (Email/Phone)</label>
+                            <label className="mb-2 block text-sm text-slate-400">Apple Pay (Email/Phone)</label>
                             <input 
-                                name="zelle" 
+                                name="applePay" 
                                 type="text"
-                                defaultValue={settings.paymentMethods?.zelle}
+                                defaultValue={settings.paymentMethods?.applePay}
                                 className="w-full rounded bg-slate-800 p-2 text-white border border-slate-700 outline-none"
                             />
                         </div>

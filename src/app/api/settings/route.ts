@@ -18,7 +18,7 @@ export async function GET(request: Request) {
                     sol: '',
                     cashapp: '',
                     paypal: '',
-                    zelle: '',
+                    applePay: '',
                 },
                 notificationEmail: 'admin@example.com'
             });

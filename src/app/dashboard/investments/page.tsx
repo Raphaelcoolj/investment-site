@@ -11,8 +11,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-1',
         name: 'Burj Khalifa Residence',
         location: 'Dubai, UAE',
-        pricePerUnit: 1000,
-        yield: '65%',
+        pricePerUnit: 5000,
+        yield: '20%',
         occupancy: '98%',
         image: 'https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?q=80&w=1000'
     },
@@ -20,8 +20,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-2',
         name: 'Central Park Tower Suite',
         location: 'New York, USA',
-        pricePerUnit: 1500,
-        yield: '82%',
+        pricePerUnit: 7000,
+        yield: '20%',
         occupancy: '94%',
         image: 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1000'
     },
@@ -29,8 +29,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-3',
         name: 'One Hyde Park',
         location: 'London, UK',
-        pricePerUnit: 1200,
-        yield: '74%',
+        pricePerUnit: 10000,
+        yield: '20%',
         occupancy: '96%',
         image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1000'
     },
@@ -38,8 +38,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-4',
         name: 'The Peak Villa',
         location: 'Hong Kong',
-        pricePerUnit: 2000,
-        yield: '89%',
+        pricePerUnit: 13000,
+        yield: '20%',
         occupancy: '100%',
         image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000'
     },
@@ -47,8 +47,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-5',
         name: 'Marina Bay Sands Penthouse',
         location: 'Singapore',
-        pricePerUnit: 2500,
-        yield: '68%',
+        pricePerUnit: 17000,
+        yield: '20%',
         occupancy: '99%',
         image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1000'
     },
@@ -56,8 +56,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-6',
         name: 'Santorini Heights Villa',
         location: 'Greece',
-        pricePerUnit: 1800,
-        yield: '72%',
+        pricePerUnit: 19000,
+        yield: '20%',
         occupancy: '95%',
         image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1000'
     },
@@ -65,8 +65,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-7',
         name: 'Champs-Élysées Luxury Suite',
         location: 'Paris, France',
-        pricePerUnit: 2200,
-        yield: '85%',
+        pricePerUnit: 22000,
+        yield: '20%',
         occupancy: '100%',
         image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1000'
     },
@@ -74,8 +74,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-8',
         name: 'The Shard Sky Residence',
         location: 'London, UK',
-        pricePerUnit: 1900,
-        yield: '64%',
+        pricePerUnit: 10000,
+        yield: '20%',
         occupancy: '97%',
         image: 'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=1000'
     },
@@ -83,8 +83,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-9',
         name: 'The Royal Atlantis Suite',
         location: 'Dubai, UAE',
-        pricePerUnit: 2800,
-        yield: '86%',
+        pricePerUnit: 28000,
+        yield: '20%',
         occupancy: '94%',
         image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000'
     },
@@ -92,8 +92,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-10',
         name: 'Beverly Hills Estate',
         location: 'California, USA',
-        pricePerUnit: 3000,
-        yield: '81%',
+        pricePerUnit: 30000,
+        yield: '20%',
         occupancy: '98%',
         image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000'
     },
@@ -101,8 +101,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-11',
         name: 'Kyoto Zen Retreat',
         location: 'Japan',
-        pricePerUnit: 1400,
-        yield: '62%',
+        pricePerUnit: 14000,
+        yield: '20%',
         occupancy: '94%',
         image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1000'
     },
@@ -110,8 +110,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-12',
         name: 'Monaco Harbor View',
         location: 'Monaco',
-        pricePerUnit: 3500,
-        yield: '90%',
+        pricePerUnit: 35000,
+        yield: '20%',
         occupancy: '100%',
         image: 'https://images.unsplash.com/photo-1541414779316-956a5084c0d4?q=80&w=1000'
     },
@@ -119,8 +119,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-13',
         name: 'Swiss Alps Chalet',
         location: 'Zermatt, Switzerland',
-        pricePerUnit: 2300,
-        yield: '70%',
+        pricePerUnit: 23000,
+        yield: '20%',
         occupancy: '92%',
         image: 'https://images.unsplash.com/photo-1502784444187-359ac186c5bb?q=80&w=1000'
     },
@@ -128,8 +128,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-14',
         name: 'Sydney Harbor Penthouse',
         location: 'Australia',
-        pricePerUnit: 2000,
-        yield: '66%',
+        pricePerUnit: 20000,
+        yield: '20%',
         occupancy: '97%',
         image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1000'
     },
@@ -137,8 +137,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-15',
         name: 'Maldives Overwater Bungalow',
         location: 'Maldives',
-        pricePerUnit: 2800,
-        yield: '88%',
+        pricePerUnit: 28000,
+        yield: '20%',
         occupancy: '99%',
         image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1000'
     },
@@ -146,8 +146,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-16',
         name: 'Bora Bora Lagoon Estate',
         location: 'French Polynesia',
-        pricePerUnit: 2400,
-        yield: '75%',
+        pricePerUnit: 24000,
+        yield: '20%',
         occupancy: '95%',
         image: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1000'
     },
@@ -155,8 +155,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-17',
         name: 'Vatican View Apartment',
         location: 'Rome, Italy',
-        pricePerUnit: 1700,
-        yield: '60%',
+        pricePerUnit: 17000,
+        yield: '20%',
         occupancy: '98%',
         image: 'https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=1000'
     },
@@ -164,8 +164,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-18',
         name: 'Lago di Como Villa',
         location: 'Italy',
-        pricePerUnit: 2600,
-        yield: '84%',
+        pricePerUnit: 26000,
+        yield: '20%',
         occupancy: '96%',
         image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1000'
     },
@@ -173,8 +173,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-19',
         name: 'Aspen Mountain Lodge',
         location: 'Colorado, USA',
-        pricePerUnit: 2200,
-        yield: '69%',
+        pricePerUnit: 22000,
+        yield: '20%',
         occupancy: '93%',
         image: 'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?q=80&w=1000'
     },
@@ -182,8 +182,8 @@ const REAL_ESTATE_PROPERTIES = [
         id: 're-20',
         name: 'Phuket Beachfront Palace',
         location: 'Thailand',
-        pricePerUnit: 1500,
-        yield: '71%',
+        pricePerUnit: 15000,
+        yield: '20%',
         occupancy: '97%',
         image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1000'
     }
@@ -415,7 +415,7 @@ export default function InvestmentsPage() {
                                             <p className="text-sm font-bold text-white">${prop.pricePerUnit.toLocaleString()}</p>
                                         </div>
                                         <div>
-                                            <p className="text-[9px] text-gray-500 uppercase font-bold tracking-wider">Annual Yield</p>
+                                            <p className="text-[9px] text-gray-500 uppercase font-bold tracking-wider">Monthly Return</p>
                                             <p className="text-sm font-bold text-emerald-400">{prop.yield}</p>
                                         </div>
                                     </div>
@@ -525,24 +525,24 @@ export default function InvestmentsPage() {
                                                 <div className="bg-emerald-500/5 rounded-2xl p-4 border border-emerald-500/10">
                                                     <p className="text-[9px] font-black text-emerald-500/60 uppercase mb-1">Monthly ROI</p>
                                                     <p className="text-lg font-black text-emerald-400">
-                                                        ${((parseFloat(investAmount) * (parseFloat(selectedProduct.yield) / 100)) / 12).toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                                        ${(parseFloat(investAmount) * (parseFloat(selectedProduct.yield) / 100)).toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                                     </p>
                                                 </div>
                                                 <div className="bg-blue-500/5 rounded-2xl p-4 border border-blue-500/10">
                                                     <p className="text-[9px] font-black text-blue-500/60 uppercase mb-1">Annual ROI</p>
                                                     <p className="text-lg font-black text-blue-400">
-                                                        ${(parseFloat(investAmount) * (parseFloat(selectedProduct.yield) / 100)).toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                                        ${(parseFloat(investAmount) * (parseFloat(selectedProduct.yield) / 100) * 12).toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                                     </p>
                                                 </div>
                                             </div>
-                                            <p className="text-[9px] text-gray-600 text-center italic">Calculated based on current {selectedProduct.yield} fixed yield</p>
+                                            <p className="text-[9px] text-gray-600 text-center italic">Calculated based on current {selectedProduct.yield} fixed monthly return</p>
                                         </div>
                                     )}
                                     {selectedProduct.category !== 'real-estate' && investAmount && (
                                         <div className="bg-slate-900/40 rounded-2xl p-4 border border-white/5">
-                                            <p className="text-[9px] font-black text-gray-500 uppercase mb-1">Potential Monthly ROI (10%)</p>
+                                            <p className="text-[9px] font-black text-gray-500 uppercase mb-1">Potential Monthly ROI (20%)</p>
                                             <p className="text-lg font-black text-white">
-                                                ${(parseFloat(investAmount) * 0.1).toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                                ${(parseFloat(investAmount) * 0.2).toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                             </p>
                                         </div>
                                     )}

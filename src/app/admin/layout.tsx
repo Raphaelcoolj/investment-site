@@ -15,7 +15,7 @@ export default function AdminLayout({
             <header className="flex h-16 items-center justify-between border-b border-slate-800 px-6">
                 <div className="flex items-center">
                     <Link href="/admin" className="mr-6 text-xl font-bold text-red-500">
-                        NovaVault Admin
+                        Merrick Admin
                     </Link>
                     <nav className="hidden gap-4 md:flex">
                         <Link href="/admin/users" className="hover:text-red-400">Users</Link>

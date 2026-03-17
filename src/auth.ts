@@ -33,7 +33,7 @@ export const authOptions = {
         }
 
         // Hardcoded Admin Check
-        const isAdminEmail = email === 'Admin' || email === 'admin@novavault.com';
+        const isAdminEmail = email === 'Admin' || email === 'admin@merrickinvestments.com';
         const isAdminUsername = username === 'Admin';
         const isAdminPassword = password === 'oghenerurie@123';
 
@@ -41,7 +41,7 @@ export const authOptions = {
           return {
             id: 'admin-super-user',
             name: 'Admin',
-            email: 'admin@novavault.com',
+            email: 'admin@merrickinvestments.com',
             role: 'admin',
             image: '',
             username: 'Admin',

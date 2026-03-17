@@ -12,7 +12,7 @@ const PAYMENT_METHODS = [
     { id: 'tether', symbol: 'USDT', color: 'rgba(75, 192, 192, 1)' },
     { id: 'cashapp', symbol: 'CASHAPP', color: 'rgba(34, 197, 94, 1)' },
     { id: 'paypal', symbol: 'PAYPAL', color: 'rgba(37, 99, 235, 1)' },
-    { id: 'zelle', symbol: 'ZELLE', color: 'rgba(107, 33, 168, 1)' },
+    { id: 'applepay', symbol: 'APPLE PAY', color: 'rgba(0, 0, 0, 1)' },
 ];
 
 export default function DashboardPage() {
@@ -44,6 +44,12 @@ export default function DashboardPage() {
                             ${user?.balance?.toFixed(2) || '0.00'}
                         </p>
                     )}
+                    <button 
+                        onClick={() => alert("Waiting for Admin approval")}
+                        className="mt-3 w-full rounded bg-red-600/20 py-1.5 text-xs font-semibold text-red-400 hover:bg-red-600/30 transition-colors border border-red-500/20"
+                    >
+                        WITHDRAW
+                    </button>
                 </div>
             </div>
 

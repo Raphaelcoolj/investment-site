@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'NovaVault | Crypto Investment',
+  title: 'Merrick Investments PLC. | Crypto Investment',
   description: 'Secure, simulated crypto investment platform.',
 };
 

@@ -12,7 +12,7 @@ const SiteSettingsSchema = new Schema({
         sol: { type: String, default: '' },
         cashapp: { type: String, default: '' },
         paypal: { type: String, default: '' },
-        zelle: { type: String, default: '' },
+        applePay: { type: String, default: '' },
     }
 }, { timestamps: true });
 

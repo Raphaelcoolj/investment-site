@@ -64,13 +64,13 @@ export default function DepositModal({ isOpen, onClose, coin, coinSymbol }: Depo
         }
     };
 
-    const isCrypto = !['cashapp', 'paypal', 'zelle'].includes(coinSymbol.toLowerCase());
+    const isCrypto = !['cashapp', 'paypal', 'applepay'].includes(coinSymbol.toLowerCase());
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
             <div className="glass-panel w-full max-w-md p-6 relative">
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white">✕</button>
-                
+
                 <h2 className="text-2xl font-bold mb-4">Deposit via {coinSymbol.toUpperCase()}</h2>
                 <p className="text-sm text-gray-400 mb-6">
                     {isCrypto ? (
@@ -84,7 +84,7 @@ export default function DepositModal({ isOpen, onClose, coin, coinSymbol }: Depo
                     <label className="mb-2 block text-sm font-medium text-slate-300">
                         Enter Amount to Deposit ($)
                     </label>
-                    <input 
+                    <input
                         type="number"
                         placeholder="e.g. 500"
                         value={amount}
@@ -101,7 +101,7 @@ export default function DepositModal({ isOpen, onClose, coin, coinSymbol }: Depo
                     {adminAddress}
                 </div>
 
-                <button 
+                <button
                     onClick={handleCopy}
                     className="w-full mb-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-sm font-medium transition-colors"
                 >
@@ -116,7 +116,7 @@ export default function DepositModal({ isOpen, onClose, coin, coinSymbol }: Depo
                     </p>
                 )}
 
-                <button 
+                <button
                     onClick={handleConfirm}
                     disabled={isConfirming}
                     className="w-full py-3 rounded-lg bg-green-600 hover:bg-green-500 font-bold transition-colors"

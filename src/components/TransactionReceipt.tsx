@@ -69,7 +69,7 @@ export default function TransactionReceipt({ isOpen, onClose, transaction }: Tra
 
                     <div className="rounded-xl bg-gray-900/50 p-4 border border-gray-800">
                         <p className="text-[10px] text-gray-500 text-center leading-relaxed">
-                            Thank you for investing with NovaVault. This receipt serves as official proof of transaction.
+                            Thank you for investing with Merrick Investments PLC. This receipt serves as official proof of transaction.
                             For any inquiries, please contact our support with the receipt ID.
                         </p>
                     </div>

@@ -37,7 +37,7 @@ export default function CryptoChart({ coinId, label, color, onChartClick }: Cryp
     const [chartData, setChartData] = useState<any>(null);
     const [currentPrice, setCurrentPrice] = useState<number | null>(null);
 
-    const isFiat = ['cashapp', 'paypal', 'zelle'].includes(coinId.toLowerCase());
+    const isFiat = ['cashapp', 'paypal', 'applepay'].includes(coinId.toLowerCase());
 
     const fetchData = async () => {
         if (isFiat) {

@@ -57,7 +57,7 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4">
       <div className="glass-panel w-full max-w-md p-8">
-        <h2 className="text-3xl font-bold mb-6 text-center text-blue-400">Login to NovaVault</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center text-blue-400">Login to Merrick Investments PLC.</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="text"

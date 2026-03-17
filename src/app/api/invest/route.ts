@@ -7,26 +7,26 @@ import Investment from '@/models/Investment';
 import Transaction from '@/models/Transaction';
 
 const PROPERTY_DATA: Record<string, { price: number; yield: number }> = {
-    're-1': { price: 1000, yield: 0.65 },
-    're-2': { price: 1500, yield: 0.82 },
-    're-3': { price: 1200, yield: 0.74 },
-    're-4': { price: 2000, yield: 0.89 },
-    're-5': { price: 2500, yield: 0.68 },
-    're-6': { price: 1800, yield: 0.72 },
-    're-7': { price: 2200, yield: 0.85 },
-    're-8': { price: 1900, yield: 0.64 },
-    're-9': { price: 2800, yield: 0.86 },
-    're-10': { price: 3000, yield: 0.81 },
-    're-11': { price: 1400, yield: 0.62 },
-    're-12': { price: 3500, yield: 0.90 },
-    're-13': { price: 2300, yield: 0.70 },
-    're-14': { price: 2000, yield: 0.66 },
-    're-15': { price: 2800, yield: 0.88 },
-    're-16': { price: 2400, yield: 0.75 },
-    're-17': { price: 1700, yield: 0.60 },
-    're-18': { price: 2600, yield: 0.84 },
-    're-19': { price: 2200, yield: 0.69 },
-    're-20': { price: 1500, yield: 0.71 }
+    're-1': { price: 5000, yield: 0.65 },
+    're-2': { price: 7000, yield: 0.82 },
+    're-3': { price: 10000, yield: 0.74 },
+    're-4': { price: 13000, yield: 0.89 },
+    're-5': { price: 17000, yield: 0.68 },
+    're-6': { price: 19000, yield: 0.72 },
+    're-7': { price: 22000, yield: 0.85 },
+    're-8': { price: 10000, yield: 0.64 },
+    're-9': { price: 28000, yield: 0.86 },
+    're-10': { price: 30000, yield: 0.81 },
+    're-11': { price: 14000, yield: 0.62 },
+    're-12': { price: 35000, yield: 0.90 },
+    're-13': { price: 23000, yield: 0.70 },
+    're-14': { price: 20000, yield: 0.66 },
+    're-15': { price: 28000, yield: 0.88 },
+    're-16': { price: 24000, yield: 0.75 },
+    're-17': { price: 17000, yield: 0.60 },
+    're-18': { price: 26000, yield: 0.84 },
+    're-19': { price: 22000, yield: 0.69 },
+    're-20': { price: 15000, yield: 0.71 }
 };
 
 export async function POST(request: Request) {
@@ -109,14 +109,7 @@ export async function GET() {
             const daysPassed = Math.floor(msPassed / (1000 * 60 * 60 * 24));
 
             if (daysPassed >= 1) {
-                let dailyYield = 0;
-                if (inv.category === 'real-estate') {
-                    const annualYield = PROPERTY_DATA[inv.productId]?.yield || 0.6;
-                    dailyYield = annualYield / 365;
-                } else {
-                    // Stocks and Commodities: 10% monthly as requested
-                    dailyYield = 0.1 / 30;
-                }
+                let dailyYield = 0.2 / 30; // 20% monthly return as requested for all investments
 
                 const profitEarned = inv.amountInvested * dailyYield * daysPassed;
                 

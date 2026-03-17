@@ -1,6 +1,6 @@
-# NovaVault - Cryptocurrency Investment Platform
+# Merrick Investments PLC. - Cryptocurrency Investment Platform
 
-NovaVault is a modern, high-performance cryptocurrency investment simulator built with Next.js 14. It features real-time market data, automated profit tracking, and a comprehensive admin management suite.
+Merrick Investments PLC. is a modern, high-performance cryptocurrency investment simulator built with Next.js 14. It features real-time market data, automated profit tracking, and a comprehensive admin management suite.
 
 ## 🚀 Key Features
 

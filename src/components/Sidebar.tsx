@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { signOut } from 'next-auth/react';
 
 const navItems = [
     { name: 'Overview', href: '/dashboard', icon: 'Home' },
@@ -35,7 +36,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             }`}>
                 <div className="flex items-center justify-between p-6">
                     <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-600">
-                        NovaVault
+                        Merrick
                     </h1>
                     <button onClick={onClose} className="text-gray-400 hover:text-white md:hidden">
                         <span className="text-2xl">✕</span>
@@ -62,7 +63,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     })}
                 </nav>
                 <div className="p-4">
-                    <button className="w-full rounded-lg border border-gray-800 bg-gray-900/50 px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 transition-colors">
+                    <button 
+                        onClick={() => signOut({ callbackUrl: '/auth/login' })}
+                        className="w-full rounded-lg border border-gray-800 bg-gray-900/50 px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 transition-colors"
+                    >
                         Logout
                     </button>
                 </div>

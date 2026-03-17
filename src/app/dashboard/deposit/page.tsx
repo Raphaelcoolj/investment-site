@@ -11,7 +11,7 @@ const METHODS = [
     { id: 'tether', symbol: 'USDT', name: 'Tether', color: 'rgba(75, 192, 192, 1)' },
     { id: 'cashapp', symbol: 'CASHAPP', name: 'CashApp', color: 'rgba(34, 197, 94, 1)' },
     { id: 'paypal', symbol: 'PAYPAL', name: 'PayPal', color: 'rgba(37, 99, 235, 1)' },
-    { id: 'zelle', symbol: 'ZELLE', name: 'Zelle', color: 'rgba(107, 33, 168, 1)' },
+    { id: 'applepay', symbol: 'APPLE PAY', name: 'Apple Pay', color: 'rgba(0, 0, 0, 1)' },
 ];
 
 export default function DepositPage() {

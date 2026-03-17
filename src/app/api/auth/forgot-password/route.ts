@@ -38,7 +38,7 @@ export async function POST(request: Request) {
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: user.email,
-            subject: 'Password Reset Request - NovaVault',
+            subject: 'Password Reset Request - Merrick Investments PLC.',
             text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n` +
                 `Please click on the following link, or paste this into your browser to complete the process within one hour of receiving it:\n\n` +
                 `${resetUrl}\n\n` +

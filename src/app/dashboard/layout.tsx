@@ -24,7 +24,7 @@ export default function DashboardLayout({
                         <span className="text-2xl">☰</span>
                     </button>
                     <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-600">
-                        NovaVault
+                        Merrick
                     </h1>
                     <div className="w-8" /> {/* Spacer */}
                 </header>
