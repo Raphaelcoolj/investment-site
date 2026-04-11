@@ -12,7 +12,12 @@ export default function ProfilePage() {
     useEffect(() => {
         setLoading(true);
         axios.get('/api/user/profile')
-            .then(res => setUser(res.data))
+            .then(res => {
+                setUser(res.data);
+                if (res.data.profileImage) {
+                    setAvatarUrl(res.data.profileImage);
+                }
+            })
             .catch(err => console.error('Failed to fetch profile:', err))
             .finally(() => setLoading(false));
     }, []);
@@ -49,9 +54,24 @@ export default function ProfilePage() {
                     className="h-24 w-24 rounded-full border-2 border-slate-700 object-cover"
                 />
                 <div>
-                    <button className="rounded bg-slate-800 px-4 py-2 text-sm text-white hover:bg-slate-700">
+                    <label className="cursor-pointer rounded bg-slate-800 px-4 py-2 text-sm text-white hover:bg-slate-700 inline-block">
                         Change Photo
-                    </button>
+                        <input type="file" className="hidden" accept="image/*" onChange={async (e) => {
+                            const file = e.target.files?.[0];
+                            if (!file) return;
+                            const fd = new FormData();
+                            fd.append('file', file);
+                            setLoading(true);
+                            try {
+                                const { data } = await axios.post('/api/upload', fd);
+                                setAvatarUrl(data.url);
+                            } catch (err) {
+                                alert('Failed to upload image');
+                            } finally {
+                                setLoading(false);
+                            }
+                        }} />
+                    </label>
                     <p className="mt-2 text-xs text-gray-500">Supported formats: JPG, PNG. Max 5MB.</p>
                 </div>
             </div>
@@ -80,7 +100,8 @@ export default function ProfilePage() {
                 
                 <div className="flex justify-end gap-4">
                     <button 
-                        onClick={() => signOut({ callbackUrl: '/auth/login' })}
+                        type="button"
+                        onClick={() => window.location.href = '/api/auth/signout'}
                         className="rounded bg-red-600 px-6 py-3 font-bold hover:bg-red-500"
                     >
                         Sign Out

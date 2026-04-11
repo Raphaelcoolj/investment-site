@@ -76,3 +76,24 @@ export async function PATCH(request: Request, { params }: { params: { id: string
         return NextResponse.json({ message: 'Error updating user' }, { status: 500 });
     }
 }
+
+export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+    try {
+        await connectToDatabase();
+        const user = await User.findById(params.id);
+        if (!user) {
+            return NextResponse.json({ message: 'User not found' }, { status: 404 });
+        }
+        
+        // Delete all transactions associated with the user
+        await Transaction.deleteMany({ userId: params.id });
+        
+        // Delete the user
+        await User.findByIdAndDelete(params.id);
+        
+        return NextResponse.json({ message: 'User deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting user:', error);
+        return NextResponse.json({ message: 'Error deleting user' }, { status: 500 });
+    }
+}

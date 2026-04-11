@@ -23,7 +23,8 @@ export default function AdminUserDetailPage({ params }: { params: { id: string }
         updates.isIncrementing = (updates.isIncrementing === 'on') as any;
 
         try {
-            await axios.patch(`/api/admin/users/${params.id}`, updates);
+            const res = await axios.patch(`/api/admin/users/${params.id}`, updates);
+            setUser(res.data);
             alert('User updated successfully');
             router.refresh();
         } catch (error) {
@@ -80,13 +81,44 @@ export default function AdminUserDetailPage({ params }: { params: { id: string }
                     </div>
                 </div>
                 
-                <button 
-                    type="submit" 
-                    disabled={loading}
-                    className="w-full rounded bg-red-600 py-3 font-semibold hover:bg-red-500"
-                >
-                    {loading ? 'Saving...' : 'Save Changes'}
-                </button>
+                <div className="flex flex-col gap-3 pt-6">
+                    <button 
+                        type="submit" 
+                        disabled={loading}
+                        className="w-full rounded bg-blue-600 py-3 font-semibold hover:bg-blue-500"
+                    >
+                        {loading ? 'Saving...' : 'Save Changes'}
+                    </button>
+                    
+                    <button 
+                        type="button" 
+                        onClick={() => router.push(`/admin/users/${params.id}/investments`)}
+                        className="w-full rounded border border-slate-700 bg-slate-800 py-3 font-semibold text-white hover:bg-slate-700"
+                    >
+                        View Investments
+                    </button>
+
+                    <button 
+                        type="button" 
+                        onClick={async () => {
+                            if (confirm('Are you sure you want to delete this user? This action cannot be undone.')) {
+                                setLoading(true);
+                                try {
+                                    await axios.delete(`/api/admin/users/${params.id}`);
+                                    alert('User deleted successfully');
+                                    router.push('/admin/users');
+                                } catch (error) {
+                                    alert('Failed to delete user');
+                                    setLoading(false);
+                                }
+                            }
+                        }}
+                        disabled={loading}
+                        className="w-full rounded bg-red-600/20 border border-red-600/50 py-3 font-semibold text-red-500 hover:bg-red-600 hover:text-white transition-colors"
+                    >
+                        Delete Account
+                    </button>
+                </div>
             </form>
         </div>
     );

@@ -64,7 +64,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </nav>
                 <div className="p-4">
                     <button 
-                        onClick={() => signOut({ callbackUrl: '/auth/login' })}
+                        onClick={() => window.location.href = '/api/auth/signout'}
                         className="w-full rounded-lg border border-gray-800 bg-gray-900/50 px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 transition-colors"
                     >
                         Logout
