@@ -30,12 +30,12 @@ export default function DashboardPage() {
     return (
         <div className="space-y-6">
             {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between items-end gap-4">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                 <div>
                     <h1 className="text-3xl font-bold">Dashboard</h1>
                     <p className="text-gray-400">Welcome back, {user?.username || 'Investor'}</p>
                 </div>
-                <div className="glass-panel px-6 py-3 min-w-[200px]">
+                <div className="glass-panel px-6 py-4 w-full md:w-auto min-w-[200px]">
                     <p className="text-sm text-gray-400">Total Balance</p>
                     {loading ? (
                         <div className="h-8 w-24 animate-pulse bg-slate-800 rounded mt-1"></div>

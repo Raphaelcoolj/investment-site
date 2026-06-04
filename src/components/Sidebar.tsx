@@ -31,7 +31,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             )}
 
             {/* Sidebar Aside */}
-            <aside className={`fixed inset-y-0 left-0 z-50 w-64 flex-col border-r border-gray-800 bg-[#0f172a] transition-transform duration-300 md:relative md:flex md:translate-x-0 ${
+            <aside className={`fixed inset-y-0 left-0 z-50 w-64 flex-col border-r border-gray-800 bg-[#0a0f1c] transition-transform duration-300 md:relative md:flex md:translate-x-0 ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}>
                 <div className="flex items-center justify-between p-6">
@@ -50,10 +50,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                                 key={item.href}
                                 href={item.href}
                                 onClick={() => onClose()}
-                                className={`flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                                className={`flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all ${
                                     isActive
-                                        ? 'bg-blue-600/10 text-blue-400'
-                                        : 'text-gray-400 hover:bg-gray-800/50 hover:text-white'
+                                        ? 'bg-blue-600/10 text-blue-400 border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]'
+                                        : 'text-gray-400 hover:bg-white/5 hover:text-white border border-transparent'
                                 }`}
                             >
                                 <span className="h-5 w-5 rounded bg-current/20" />
@@ -65,7 +65,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <div className="p-4">
                     <button 
                         onClick={() => window.location.href = '/api/auth/signout'}
-                        className="w-full rounded-lg border border-gray-800 bg-gray-900/50 px-4 py-2 text-sm text-gray-400 hover:bg-gray-800 transition-colors"
+                        className="w-full rounded-lg border border-gray-800 bg-white/5 px-4 py-2 text-sm text-gray-400 hover:bg-white/10 hover:text-white transition-all backdrop-blur-sm"
                     >
                         Logout
                     </button>

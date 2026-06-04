@@ -67,8 +67,8 @@ export default function DepositModal({ isOpen, onClose, coin, coinSymbol }: Depo
     const isCrypto = !['cashapp', 'paypal', 'applepay'].includes(coinSymbol.toLowerCase());
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-            <div className="glass-panel w-full max-w-md p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+            <div className="glass-panel w-full max-w-md p-6 relative max-h-[90vh] overflow-y-auto">
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white">✕</button>
 
                 <h2 className="text-2xl font-bold mb-4">Deposit via {coinSymbol.toUpperCase()}</h2>

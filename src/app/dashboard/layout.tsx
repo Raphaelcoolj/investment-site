@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Sidebar from '@/components/Sidebar';
+import FloatingTestimonials from '@/components/FloatingTestimonials';
 
 export default function DashboardLayout({
     children,
@@ -11,12 +12,12 @@ export default function DashboardLayout({
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <div className="flex min-h-screen bg-[#0f172a] text-white">
+        <div className="flex min-h-screen bg-[#0a0f1c] text-white">
             <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
             
             <div className="flex flex-1 flex-col h-screen overflow-hidden">
                 {/* Mobile Top Bar */}
-                <header className="flex h-16 items-center justify-between border-b border-gray-800 bg-[#0f172a]/50 px-4 backdrop-blur-xl md:hidden">
+                <header className="flex h-16 items-center justify-between border-b border-gray-800 bg-[#0a0f1c]/80 px-4 backdrop-blur-xl md:hidden">
                     <button 
                         onClick={() => setIsSidebarOpen(true)}
                         className="text-gray-400 hover:text-white"
@@ -30,9 +31,12 @@ export default function DashboardLayout({
                 </header>
 
                 <main className="flex-1 overflow-y-auto p-4 md:p-8">
-                    {children}
+                    <div className="mx-auto max-w-7xl">
+                        {children}
+                    </div>
                 </main>
             </div>
+            <FloatingTestimonials />
         </div>
     );
 }
